@@ -1,0 +1,42 @@
+config:
+  target: 'http://localhost'
+  phases:
+    - duration: 2
+      arrivalRate: 5
+  processor: "./load-funcs.js"
+scenarios:
+  - name: "Get 1 description"
+    flow:
+      - function: "generateTestVars"
+      - get:
+          url: "http://localhost:3000/{{ id }}"
+      - get:
+          url: "http://localhost:3003/usersthumbnail/1"
+      - get:
+          url: "http://localhost:3003/comments/{{ id }}"
+      - get:
+          url: "http://localhost:3003/categories/{{ id }}"
+      - get:
+          url: "http://localhost:3001/videos/{{ id }}"
+      - get:
+          url: "http://localhost:3003/details/{{ id }}"
+      - get:
+          url: "http://localhost:3003/categories/{{ id }}"
+      - get:
+          url: "http://localhost:3001/videos/{{ id }}"
+      - get:
+          url: "http://localhost:3003/usersthumbnail/25990"
+      - get:
+          url: "http://localhost:3003/usersthumbnail/30540"
+      - get:
+          url: "http://localhost:3003/usersthumbnail/33560"
+      - get:
+          url: "http://localhost:3003/usersthumbnail/65343"
+      - post:
+          url: "http://localhost:3002/graphql"
+          json: videoRecBody
+
+
+
+
+

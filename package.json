@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "Proxy for Video Player service",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "newrelic": "^5.6.3"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/index.js"
+    "start": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
