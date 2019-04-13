@@ -35,7 +35,7 @@ scenarios:
       - post:
           url: "http://localhost:3002/graphql"
           json:
-            query: "{getRecommendations(videoId:100) {id,author,title,thumbnail,plays}}"
+            query: "{getRecommendations(videoId: {{ id }}) {id,author,title,thumbnail,plays}}"
 
 
 
