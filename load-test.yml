@@ -34,7 +34,8 @@ scenarios:
           url: "http://localhost:3003/usersthumbnail/65343"
       - post:
           url: "http://localhost:3002/graphql"
-          json: videoRecBody
+          json:
+            query: "{getRecommendations(videoId:100) {id,author,title,thumbnail,plays}}"
 
 
 
