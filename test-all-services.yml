@@ -1,11 +1,11 @@
 config:
   target: 'http://localhost'
   phases:
-    - duration: 2
-      arrivalRate: 5
+    - duration: 1
+      arrivalRate: 100
   processor: "./load-funcs.js"
 scenarios:
-  - name: "Get 1 description"
+  - name: "Visit a typical video page"
     flow:
       - function: "generateTestVars"
       - get:
